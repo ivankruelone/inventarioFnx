@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="basededatosDataSet1" targetNamespace="http://tempuri.org/basededatosDataSet1.xsd" xmlns:mstns="http://tempuri.org/basededatosDataSet1.xsd" xmlns="http://tempuri.org/basededatosDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="basededatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="basededatosConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MiniPDV.My.MySettings.GlobalReference.Default.basededatosConnectionString" Provider="System.Data.SQLite" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="destinosTableAdapter" GeneratorDataComponentClassName="destinosTableAdapter" Name="destinos" UserDataComponentName="destinosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="basededatosConnectionString (MySettings)" DbObjectName="main.destinos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [suc], [nomsuc] FROM [destinos]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="suc" DataSetColumn="suc" />
+              <Mapping SourceColumn="nomsuc" DataSetColumn="nomsuc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="basededatosDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="basededatosDataSet1" msprop:Generator_UserDSName="basededatosDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="destinos" msprop:Generator_TableClassName="destinosDataTable" msprop:Generator_TableVarName="tabledestinos" msprop:Generator_TablePropName="destinos" msprop:Generator_RowDeletingName="destinosRowDeleting" msprop:Generator_UserTableName="destinos" msprop:Generator_RowChangingName="destinosRowChanging" msprop:Generator_RowEvHandlerName="destinosRowChangeEventHandler" msprop:Generator_RowDeletedName="destinosRowDeleted" msprop:Generator_RowEvArgName="destinosRowChangeEvent" msprop:Generator_RowChangedName="destinosRowChanged" msprop:Generator_RowClassName="destinosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="suc" msprop:Generator_ColumnVarNameInTable="columnsuc" msprop:Generator_ColumnPropNameInRow="suc" msprop:Generator_ColumnPropNameInTable="sucColumn" msprop:Generator_UserColumnName="suc" type="xs:long" />
+              <xs:element name="nomsuc" msprop:Generator_ColumnVarNameInTable="columnnomsuc" msprop:Generator_ColumnPropNameInRow="nomsuc" msprop:Generator_ColumnPropNameInTable="nomsucColumn" msprop:Generator_UserColumnName="nomsuc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

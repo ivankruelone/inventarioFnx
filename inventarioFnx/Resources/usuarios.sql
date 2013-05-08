@@ -1,0 +1,1 @@
+INSERT INTO "usuarios" VALUES(1,'admin','f3n1x','Administrador del sistema',1,12345,1);

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="basededatosDataSet" targetNamespace="http://tempuri.org/basededatosDataSet.xsd" xmlns:mstns="http://tempuri.org/basededatosDataSet.xsd" xmlns="http://tempuri.org/basededatosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="basededatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="basededatosConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MiniPDV.My.MySettings.GlobalReference.Default.basededatosConnectionString" Provider="System.Data.SQLite" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tipo_salidaTableAdapter" GeneratorDataComponentClassName="tipo_salidaTableAdapter" Name="tipo_salida" UserDataComponentName="tipo_salidaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="basededatosConnectionString (MySettings)" DbObjectName="main.tipo_salida" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [tipo], [salida] FROM [tipo_salida]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+              <Mapping SourceColumn="salida" DataSetColumn="salida" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="basededatosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="basededatosDataSet" msprop:Generator_UserDSName="basededatosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tipo_salida" msprop:Generator_TableClassName="tipo_salidaDataTable" msprop:Generator_TableVarName="tabletipo_salida" msprop:Generator_TablePropName="tipo_salida" msprop:Generator_RowDeletingName="tipo_salidaRowDeleting" msprop:Generator_UserTableName="tipo_salida" msprop:Generator_RowChangingName="tipo_salidaRowChanging" msprop:Generator_RowEvHandlerName="tipo_salidaRowChangeEventHandler" msprop:Generator_RowDeletedName="tipo_salidaRowDeleted" msprop:Generator_RowEvArgName="tipo_salidaRowChangeEvent" msprop:Generator_RowChangedName="tipo_salidaRowChanged" msprop:Generator_RowClassName="tipo_salidaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo" type="xs:long" />
+              <xs:element name="salida" msprop:Generator_ColumnVarNameInTable="columnsalida" msprop:Generator_ColumnPropNameInRow="salida" msprop:Generator_ColumnPropNameInTable="salidaColumn" msprop:Generator_UserColumnName="salida">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

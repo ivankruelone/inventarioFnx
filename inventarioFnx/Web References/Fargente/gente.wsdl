@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:gente" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:gente" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:gente">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="productosRequest">
+    <wsdl:part name="mac" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="productosResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sucursalesRequest">
+    <wsdl:part name="mac" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sucursalesResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="tiposalidaRequest">
+    <wsdl:part name="mac" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="tiposalidaResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recetaRequest">
+    <wsdl:part name="receta" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recetaResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="corteRequest">
+    <wsdl:part name="corte" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="corteResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="inviniRequest">
+    <wsdl:part name="invini" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="inviniResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="entradaRequest">
+    <wsdl:part name="entrada" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="entradaResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="salidaRequest">
+    <wsdl:part name="salida" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="salidaResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ajusteRequest">
+    <wsdl:part name="ajuste" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ajusteResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="missingRequest">
+    <wsdl:part name="sucursal" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="missingResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="gentePortType">
+    <wsdl:operation name="productos">
+      <wsdl:input message="tns:productosRequest" />
+      <wsdl:output message="tns:productosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sucursales">
+      <wsdl:input message="tns:sucursalesRequest" />
+      <wsdl:output message="tns:sucursalesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="tiposalida">
+      <wsdl:input message="tns:tiposalidaRequest" />
+      <wsdl:output message="tns:tiposalidaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="receta">
+      <wsdl:input message="tns:recetaRequest" />
+      <wsdl:output message="tns:recetaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="corte">
+      <wsdl:input message="tns:corteRequest" />
+      <wsdl:output message="tns:corteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="invini">
+      <wsdl:input message="tns:inviniRequest" />
+      <wsdl:output message="tns:inviniResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="entrada">
+      <wsdl:input message="tns:entradaRequest" />
+      <wsdl:output message="tns:entradaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="salida">
+      <wsdl:input message="tns:salidaRequest" />
+      <wsdl:output message="tns:salidaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ajuste">
+      <wsdl:input message="tns:ajusteRequest" />
+      <wsdl:output message="tns:ajusteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="missing">
+      <wsdl:input message="tns:missingRequest" />
+      <wsdl:output message="tns:missingResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="genteBinding" type="tns:gentePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="productos">
+      <soap:operation soapAction="urn:gente#productos" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sucursales">
+      <soap:operation soapAction="urn:gente#sucursales" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tiposalida">
+      <soap:operation soapAction="urn:gente#tiposalida" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receta">
+      <soap:operation soapAction="urn:gente#receta" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="corte">
+      <soap:operation soapAction="urn:gente#corte" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="invini">
+      <soap:operation soapAction="urn:gente#invini" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="entrada">
+      <soap:operation soapAction="urn:gente#entrada" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="salida">
+      <soap:operation soapAction="urn:gente#salida" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ajuste">
+      <soap:operation soapAction="urn:gente#ajuste" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="missing">
+      <soap:operation soapAction="urn:gente#missing" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:gente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="gente">
+    <wsdl:port name="gentePort" binding="tns:genteBinding">
+      <soap:address location="http://201.151.238.53/nusoap/servicios/gente.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
